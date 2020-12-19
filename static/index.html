@@ -18,16 +18,25 @@
            document.getElementById('createForm').submit();
        }
      </script>
+     <style>
+     .myDiv {
+         text-align: center;
+         position: fixed;
+         top: 30%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+     }
+     </style>
    </head>
    <body>
+     <div class="myDiv">
      <form action="/create" method="post" id="createForm">
      <label for="longURL">Paste a Long URL:</label>
      <br />
      <input type="url" id="longURLInput" name="longURL" size="50" maxlength="400" placeholder="https://example.com/some/long/url" onkeydown="return event.key != 'Enter';" autocomplete="off" autofocus required />
-     <br />
      <div id='captcha-1'></div>
-     <br />
      <button id="submitButton" type="button" onclick="showCaptcha()">Submit</button>
      </form>
+     </div>
    </body>
 </html>
