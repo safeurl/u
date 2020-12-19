@@ -1,0 +1,37 @@
+name:                safeurl
+version:             0.1.0
+synopsis:            Bot safe url shortner
+description:         Please see README.md
+license:             MIT
+license-file:        LICENSE
+Author:              Ravi Kant Sharma
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable safeurl
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  other-modules:       Captcha
+                     , ShortURL
+                     , STemplates
+  build-depends:       base
+                     , aeson
+                     , bytestring
+                     , hedis
+                     , http-client
+                     , http-client-tls
+                     , http-types
+                     , mtl
+                     , network-uri
+                     , random
+                     , scotty
+                     , semigroups
+                     , stache
+                     , text
+                     , transformers
+                     , wai
+                     , wai-extra
+                     , yaml
+  default-language:    Haskell2010

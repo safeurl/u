@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Show URL</title>
+      <script src="https://hcaptcha.com/1/api.js?recaptchacompat=off" async defer></script>
+      <script>
+         function submitForm(hres) {
+             document.getElementById('showForm').submit();
+         }
+      </script>
+   </head>
+   <body>
+      Solve captcha to see the long URL
+      <form action="/show" method="POST" id="showForm">
+         <input type="hidden" id="shortKey" name="shortKey" value={{ shortKey }} />
+         <div class="h-captcha" data-callback="submitForm" data-sitekey="ce091196-2a6a-4eaa-864b-caf7d83e3416"></div>
+         <br />
+      </form>
+   </body>
+</html>

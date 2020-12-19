@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>URL Shortner</title>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+     <script src="https://hcaptcha.com/1/api.js?recaptchacompat=off&render=explicit" async defer></script>
+     <script>
+       function showCaptcha() {
+           widgetID = hcaptcha.render('captcha-1', {
+               'sitekey': 'ce091196-2a6a-4eaa-864b-caf7d83e3416',
+               'callback': 'submitForm'
+           });
+       }
+
+       function submitForm(hres) {
+           document.getElementById('createForm').submit();
+       }
+     </script>
+   </head>
+   <body>
+     <form action="/create" method="post" id="createForm">
+     <label for="longURL">Paste a Long URL:</label>
+     <br />
+     <input type="url" id="longURLInput" name="longURL" size="50" maxlength="400" placeholder="https://example.com/some/long/url" onkeydown="return event.key != 'Enter';" autocomplete="off" autofocus required />
+     <br />
+     <div id='captcha-1'></div>
+     <br />
+     <button id="submitButton" type="button" onclick="showCaptcha()">Submit</button>
+     </form>
+   </body>
+</html>
