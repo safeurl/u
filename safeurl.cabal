@@ -33,5 +33,6 @@ executable safeurl
                      , transformers
                      , wai
                      , wai-extra
+                     , wai-middleware-static
                      , yaml
   default-language:    Haskell2010
