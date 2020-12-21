@@ -61,27 +61,36 @@
         <div class="u-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4">Get your spam protected short url</h1>
             <form action="/create" method="post" id="createForm">
-              <div class="form-row">
-                <div class="col-auto">
-                <input type="url" id="longURLInput" name="longURL" class="form-control form-control-lg" size="60" maxlength="400" placeholder="https://example.com/some/long/url" onkeydown="return event.key != 'Enter';" autocomplete="off" autofocus required />
+                <div class="input-group">
+                    <input
+                        type="url"
+                        id="longURLInput"
+                        name="longURL"
+                        class="form-control form-control-lg"
+                        size="55"
+                        maxlength="400"
+                        placeholder="https://example.com/some/long/url"
+                        onkeydown="return event.key != 'Enter';"
+                        autocomplete="off"
+                        required
+                    />
+                    <div class="input-group-append">
+                        <button id="submitButton" class="btn btn-primary btn-lg" type="button" onclick="showCaptcha()">Get</button>
+                    </div>
                 </div>
-                <div class="input-group-append">
-                <button id="submitButton" class="btn btn-primary btn-lg" type="button" onclick="showCaptcha()">Get</button>
-                </div>
-              </div>
                 <div id="captcha-1"></div>
             </form>
         </div>
 
         <div class="container pt-4">
-          <div class="card-deck mb-3 text-center">
-            <div class="card mb-4 shadow-sm">
-              <img src="privacy.svg" class="img-fluid" alt="privacy first" />
+            <div class="card-deck mb-3 text-center">
+                <div class="card mb-4 shadow-sm">
+                    <img src="privacy.svg" class="img-fluid" alt="privacy first" />
                     <div class="card-header">
                         <h4 class="my-0 font-weight-normal">privacy first</h4>
                     </div>
                     <div class="card-body">
-                      <p>No pesky trackers or annoying cookie banners.</p>
+                        <p>No pesky trackers or annoying cookie banners.</p>
                     </div>
                 </div>
                 <div class="card mb-4 shadow-sm">
