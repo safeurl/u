@@ -49,7 +49,7 @@ shortURLResponse rConn lu hostname = do
         uri' = encodeUtf8 (TL.toStrict lu)
     resp <- liftIO (saveURL rConn shorty uri')
     case resp of
-      Right R.Ok -> html $ renderMustache createdTemplate $ object ["longURL"  .= lu,
+      Right True -> html $ renderMustache createdTemplate $ object ["longURL"  .= lu,
                                                                     "shortURL" .= shortURL,
                                                                     "hostname" .= BC.unpack hostname]
       _          -> status serviceUnavailable503 >> html message503

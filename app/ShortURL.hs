@@ -31,6 +31,6 @@ getURL conn shortURI = R.runRedis conn $ R.get shortURI
 saveURL :: R.Connection
         -> BC.ByteString
         -> BC.ByteString
-        -> IO (Either R.Reply R.Status)
+        -> IO (Either R.Reply Bool)
 saveURL conn shortURL url =
-  R.runRedis conn $ R.set shortURL url
+  R.runRedis conn $ R.setnx shortURL url
