@@ -54,7 +54,7 @@
                 var copyBtn = document.querySelector(".js-copy-btn");
 
                 copyBtn.addEventListener("click", function (event) {
-                    copyTextToClipboard("{{ hostname }}/{{ shortURL }}");
+                    copyTextToClipboard("https://{{ hostname }}/{{ shortURL }}");
                 });
             }
         </script>
@@ -92,7 +92,7 @@
         <div class="u-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-4 text-success">Success!</h1>
             <p class="lead">
-                Short URL is <strong>{{ hostname }}/{{ shortURL }}</strong><button class="js-copy-btn btn btn-outline-dark mx-2">Copy</button>
+                Short URL is <strong>https://{{ hostname }}/{{ shortURL }}</strong><button class="js-copy-btn btn btn-outline-dark mx-2">Copy</button>
                 <br />
                 <a href="{{ shortURL }}">Go to short URL</a>
             </p>
