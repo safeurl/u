@@ -28,6 +28,3 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
-
-      - name: Check spelling
-        uses: check-spelling/check-spelling@0.0.16-alpha
