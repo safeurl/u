@@ -1,6 +1,6 @@
 name:                safeurl
 version:             0.1.0
-synopsis:            Bot safe url shortner
+synopsis:            spam safe url shortener
 description:         Please see README.md
 license:             MIT
 license-file:        LICENSE
