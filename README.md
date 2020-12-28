@@ -4,11 +4,21 @@
 
 You can learn more about the service [here](https://u.r4v1.net/about.html).
 
-This service is deployed on Heroku using [heroku-buildpack-stack](https://github.com/mfine/heroku-buildpack-stack)
+This service is deployed on [Heroku](http://heroku.com) using [heroku-buildpack-stack](https://github.com/mfine/heroku-buildpack-stack)
 
 ``` shell
 heroku create safe-url \
   -b https://github.com/mfine/heroku-buildpack-stack
+```
+
+## local development
+
+``` shell
+export PORT=3000
+export HCAPTCHA_SECRET=XXX
+export REDIS_URL=redis://127.0.0.1:6379
+
+stack build && stack exec safeurl
 ```
 
 ## useful heroku commands
