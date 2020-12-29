@@ -61,11 +61,8 @@ app :: R.Connection -> String -> ScottyM ()
 app rConn captchaSecret = do
     middleware logStdoutDev
     middleware $ staticPolicy (noDots >-> addBase "static")
+
     get "/" $ file "static/index.html"
-    --get "/u.png" $ file "assets/img/u.png"
-    --get "/privacy.svg" $ file "assets/img/pixeltrue-settings-1.svg"
-    --get "/free.svg" $ file "assets/img/pixeltrue-special-deals-1.svg"
-    --get "/stats.svg" $ file "assets/img/pixeltrue-data-analyse-1.svg"
 
     post "/show" $ do
       h <- paramHandleMissing "h-captcha-response"
