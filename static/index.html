@@ -22,10 +22,18 @@
             });
 
             function showCaptcha() {
-                widgetID = hcaptcha.render("captcha-1", {
-                    sitekey: "ce091196-2a6a-4eaa-864b-caf7d83e3416",
-                    callback: "submitForm",
-                });
+                var e = document.getElementById('longURLInput');
+                val = e.value
+                if (val.length < 8 || val.length > 400) {
+                    e.value = "";
+                    e.placeholder = "Enter a valid URL.";
+                }
+                else {
+                    widgetID = hcaptcha.render("captcha-1", {
+                        sitekey: "ce091196-2a6a-4eaa-864b-caf7d83e3416",
+                        callback: "submitForm",
+                    });
+                }
             }
 
             function submitForm(hres) {
@@ -37,7 +45,7 @@
     <body>
         <div id="nav-header"></div>
         <div class="u-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-4">Get your spam protected short url</h1>
+            <h1 class="display-4">Get your spam protected short URL</h1>
             <form action="/create" method="post" id="createForm">
                 <div class="input-group">
                     <input
@@ -46,6 +54,7 @@
                         name="longURL"
                         class="form-control form-control-lg"
                         size="55"
+                        minlength="8"
                         maxlength="400"
                         placeholder="https://example.com/some/long/url"
                         onkeydown="return event.key != 'Enter';"
