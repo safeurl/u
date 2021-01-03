@@ -2,6 +2,8 @@
 
 [![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5gtp.svg)](https://betteruptime.com/?utm_source=status_badge)
 
+![MIT License badge](https://img.shields.io/github/license/safeurl/u) ![Github Issues badge](https://img.shields.io/github/issues/safeurl/u)
+
 You can learn more about the service [here](https://u.r4v1.net/about.html).
 
 This service is deployed on [Heroku](http://heroku.com) using [heroku-buildpack-stack](https://github.com/mfine/heroku-buildpack-stack)
