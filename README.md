@@ -1,6 +1,10 @@
-# https://u.r4v1.net/
+<img src="./static/u.png" alt="U image" style="zoom:20%;" />
 
-[![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5gtp.svg)](https://betteruptime.com/?utm_source=status_badge)
+---
+<p style="text-align: center;">
+<a href="https://u.r4v1.net">https://u.r4v1.net</a>
+
+![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5gtp.svg)
 
 ![MIT License badge](https://img.shields.io/github/license/safeurl/u) ![Github Issues badge](https://img.shields.io/github/issues/safeurl/u)
 
