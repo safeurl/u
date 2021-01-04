@@ -3,8 +3,10 @@
 </p>
 
 ---
-<p style="text-align: center;">
+<p align="center">
+<h3>
 <a href="https://u.r4v1.net">https://u.r4v1.net</a>
+</h3>
 </p>
 
 ![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5gtp.svg)
