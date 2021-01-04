@@ -1,8 +1,11 @@
 <p align="center">
 <img src="./static/u.png" alt="U image" width="128" height="128" />
+</p>
 
 ---
+<p style="text-align: center;">
 <a href="https://u.r4v1.net">https://u.r4v1.net</a>
+</p>
 
 ![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5gtp.svg)
 
