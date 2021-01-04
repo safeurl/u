@@ -1,4 +1,4 @@
-<img src="./static/u.png" alt="U image" style="zoom:20%;" />
+<img src="./static/u.png" alt="U image" width="128" height="128" />
 
 ---
 <p style="text-align: center;">
