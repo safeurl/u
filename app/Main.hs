@@ -62,7 +62,9 @@ app rConn captchaSecret = do
     middleware logStdoutDev
     middleware $ staticPolicy (noDots >-> addBase "static")
 
-    get "/" $ file "static/index.html"
+    get "/" $ do
+      addHeader "Content-Type" "text/html; charset=utf-8"
+      file "static/index.html"
 
     post "/show" $ do
       h <- paramHandleMissing "h-captcha-response"
