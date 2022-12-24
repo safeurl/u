@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./static/u.png" alt="U image" width="128" height="128" />
+<img src="./static/ok.png" alt="okurl image" width="128" height="128" />
 </p>
 
 ---
