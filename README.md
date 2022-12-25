@@ -5,7 +5,7 @@
 ---
 <p align="center">
 <h3>
-<a href="https://u.r4v1.net">https://u.r4v1.net</a>
+<a href="https://www.okurl.in">okurl.in</a>
 </h3>
 </p>
 
@@ -13,7 +13,7 @@
 
 ![MIT License badge](https://img.shields.io/github/license/safeurl/u) ![Github Issues badge](https://img.shields.io/github/issues/safeurl/u)
 
-You can learn more about the service [here](https://u.r4v1.net/about.html).
+You can learn more about the service [here](https://www.okurl.in/about.html).
 
 This service is deployed on [Heroku](http://heroku.com) using [heroku-buildpack-stack](https://github.com/mfine/heroku-buildpack-stack)
 
