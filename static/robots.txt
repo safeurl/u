@@ -1,2 +1,4 @@
-User-agent: * 
+# Je le voie, mais je ne le crois pas.
+
+User-agent: hal
 Disallow: /
