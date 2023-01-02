@@ -1,4 +1,4 @@
 # Je le voie, mais je ne le crois pas.
 
-User-agent: hal
+User-agent: HAL9000
 Disallow: /
