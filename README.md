@@ -9,7 +9,7 @@
 </h3>
 </p>
 
-![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5gtp.svg)
+![Better Uptime Badge](https://betteruptime.com/status-badges/v1/monitor/5hsf.svg)
 
 ![MIT License badge](https://img.shields.io/github/license/safeurl/u) ![Github Issues badge](https://img.shields.io/github/issues/safeurl/u)
 
