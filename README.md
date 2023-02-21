@@ -26,7 +26,7 @@ heroku create safe-url \
 
 ``` shell
 export PORT=3000
-export HCAPTCHA_SECRET=XXX
+export CAPTCHA_SECRET=XXX
 export REDIS_URL=redis://127.0.0.1:6379
 
 stack build && stack exec safeurl

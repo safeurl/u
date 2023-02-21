@@ -67,7 +67,7 @@ app rConn captchaSecret = do
       file "static/index.html"
 
     post "/show" $ do
-      h <- paramHandleMissing "h-captcha-response"
+      h <- paramHandleMissing "cf-turnstile-response"
       sk <- paramHandleMissing "shortKey"
       hostname <- fromMaybe "" . requestHeaderHost <$> request
       captchaResult <- liftIO $ callCaptcha (TL.unpack h) captchaSecret
@@ -81,7 +81,7 @@ app rConn captchaSecret = do
 
 -- TODO: validate long url, format, length
     post "/create" $ do
-      h <- paramHandleMissing "h-captcha-response"
+      h <- paramHandleMissing "cf-turnstile-response"
       lu <- paramHandleMissing "longURL"
       hostname <- fromMaybe "" . requestHeaderHost <$> request
       captchaResult <- liftIO $ callCaptcha (TL.unpack h) captchaSecret
@@ -93,7 +93,7 @@ app rConn captchaSecret = do
 main :: IO()
 main = do
     appPort <- read <$> getEnv "PORT"
-    captchaSecret <- fromMaybe (error "HCAPTCHA_SECRET not found") <$> lookupEnv "HCAPTCHA_SECRET"
+    captchaSecret <- fromMaybe (error "CAPTCHA_SECRET not found") <$> lookupEnv "CAPTCHA_SECRET"
     connectStr <- fromMaybe (error "REDIS_URL not found") <$> lookupEnv "REDIS_URL"
     rConn <- case R.parseConnectInfo connectStr of
                   Left e -> error ("redis connection error: " ++ e)

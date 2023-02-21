@@ -27,30 +27,16 @@
         </div>
 
         <div class="container pt-4">
-            The benefits of using a URL shortener service to share URLs are well known. But what many URL shortener services do under the guise of free is sell your and your user's data to 3rd party trackers. We built this service, not only
-            to offer a privacy-oriented option but also one which protects your URL from spambots. eg. WhatsApp/Telegram group chat links are often a target of spambots in online forums.<br />
+            okurl understand the benefits of sharing shortened URLs, but we also recognize the concerns of privacy and protection from spambots. Many free URL shortener services sell user data to third-party trackers, which is why we created a privacy-oriented option that safeguards your URL from spambots. This is particularly relevant for group chat links in online forums such as WhatsApp and Telegram, which are often targeted by spambots.<br />
             <br />
             <h3>Captcha</h3>
-            The current approach is to challenge users with a captcha before they can see the original URL. Yes, we hate captcha too. Given how URL shortener services are especially prone to
-            <a href="https://en.wikipedia.org/wiki/URL_shortening#Abuse">abuse</a>, captcha offers the right balance between security and user experience. It is very hard to differentiate between a spambot and a legitimate user without
-            harvesting the user's activity data. The choice between violating user's privacy and an extra step is a simple one. You can also install <a href="https://privacypass.github.io/">Privacy Pass</a> extension to bypass the captcha
-            challenge while preserving user anonymity.<br />
-            <br />
-            We rely on <a href="https://www.hcaptcha.com/">hCaptcha</a> for the captcha challenge. hCaptcha is a popular privacy-focused alternative to Google's <a href="https://www.google.com/recaptcha">reCAPTCHA</a> and is trusted by
-            large internet companies like <a href="https://blog.cloudflare.com/moving-from-recaptcha-to-hcaptcha/">Cloudflare</a>.<br />
-            <br />
-            Of course, captcha is not a complete solution for spam in any way. There are <a href="https://anti-captcha.com/">many</a> <a href="https://2captcha.com/">businesses</a> that employ an army of Humans to solve captchas. The
-            goal is to make it difficult enough so that it is not economically viable to spammers.<br />
-            <br />
-            Also, everytime you solve a captcha, you make a small donation to the Wikimedia Foundation.<br />
-            <br />
-            <div style="text-align:center;">
-              <img class="img-thumbnail" src="/donation.png" alt="donate to Wikimedia Foundation" width="426" height="111"><br />
-            </div>
-            <br />
 
+            Our current method to protect the original URL is to use a captcha challenge. We understand that captchas can be frustrating, but due to the high risk of <a href="https://en.wikipedia.org/wiki/URL_shortening#Abuse">abuse</a> in URL shortener services, it strikes a balance between security and user experience. It is challenging to differentiate between spambots and legitimate users without collecting user activity data, which would violate user privacy. Therefore, we chose to use a captcha challenge to provide the necessary protection. To improve the user experience, we suggest installing the <a href="https://privacypass.github.io/">Privacy Pass</a> extension to bypass the captcha challenge while preserving user anonymity.<br />
+            <br />
+            To perform the captcha challenge, we rely on <a href="https://www.cloudflare.com/products/turnstile/"> Cloudflare Turnstile</a>, a popular privacy-focused alternative to Google's <a href="https://www.google.com/recaptcha">reCAPTCHA</a>. However, it is important to note that captchas are not a complete solution to prevent spam. <a href="https://anti-captcha.com/">Some</a> <a href="https://2captcha.com/">businesses</a> employ humans to solve captchas, but we aim to make it difficult enough for spammers to deter them economically.<br />
+            <br />
             <h3>Security</h3>
-            To protect our users from Malware or Phishing, we do not auto-redirect users to the original URL. The users are shown the full URL in text and make a conscious decision on whether to visit the full URL or not.<br />
+            We prioritize the safety of our users from malware and phishing attempts. For this reason, we do not auto-redirect users to the original URL. Instead, we display the full URL in text, allowing users to make a conscious decision on whether to visit the URL or not. This way, users have more control over their online safety and can avoid visiting URLs that may potentially be harmful.<br />
             <br />
             <h3>Analytics</h3>
             (Coming soon)<br />

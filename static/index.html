@@ -13,7 +13,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-        <script src="https://hcaptcha.com/1/api.js?recaptchacompat=off&render=explicit" async defer></script>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
         <script>
             $(function () {
                 $("#nav-header").load("navhead.html");
@@ -29,15 +29,13 @@
                     e.placeholder = "Enter a valid URL.";
                 }
                 else {
-                    widgetID = hcaptcha.render("captcha-1", {
-                        sitekey: "ce091196-2a6a-4eaa-864b-caf7d83e3416",
-                        callback: "submitForm",
+                    widgetID = turnstile.render("#cf-turnstile", {
+                        sitekey: "0x4AAAAAAACpydFGHpGE9tPa",
+                        callback: function submitForm(hres) {
+                            document.getElementById("createForm").submit();
+                        }
                     });
                 }
-            }
-
-            function submitForm(hres) {
-                document.getElementById("createForm").submit();
             }
         </script>
         <link rel="stylesheet" href="u.css" />
@@ -66,7 +64,7 @@
                     </div>
                 </div>
                 <small class="text-muted">By clicking Get, you are agreeing to our <a href="/tos.html">Terms of Service</a> and <a href="/privacy.html">Privacy Policy</a>.</small>
-                <div id="captcha-1"></div>
+                <div id="cf-turnstile"></div>
             </form>
         </div>
         <div class="container pt-4">
