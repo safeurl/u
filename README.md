@@ -26,6 +26,8 @@ stack build && stack exec safeurl
 
 ## useful commands
 
+[Setup testing captcha keys](https://developers.cloudflare.com/turnstile/troubleshooting/testing/)
+
 [acme.sh deploy BuyPass.com CA](https://github.com/acmesh-official/acme.sh/wiki/BuyPass.com-CA)
 
 ``` shell
